@@ -14,7 +14,7 @@ public class view_trangChuQuanLy extends javax.swing.JFrame {
 
     /**
      * Creates new form trangChu
-     */      
+     */
     public view_trangChuQuanLy() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -233,8 +233,6 @@ public class view_trangChuQuanLy extends javax.swing.JFrame {
 
     private void btn_phieuGiamGiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_phieuGiamGiaActionPerformed
         bangHienThi.removeAll();
-        viewPhieuGiamGia pgg = new viewPhieuGiamGia();
-        bangHienThi.add(pgg).setVisible(true);
     }//GEN-LAST:event_btn_phieuGiamGiaActionPerformed
 
     private void btn_NhanVienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_NhanVienActionPerformed

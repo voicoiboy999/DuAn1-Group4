@@ -11,7 +11,7 @@ import java.util.Date;
  * @author LEGION 5
  */
 public class model_PhieuGiamGia {
-    private int Stt;
+
     private String maPGG;
     private String tenPGG;
     private double dieuKienGiam;
@@ -21,20 +21,11 @@ public class model_PhieuGiamGia {
     private Date ngayBatDau;
     private Date ngayKetThuc;
     private boolean maHTGG;
-    private String trangThai;
 
     public model_PhieuGiamGia() {
     }
 
-    public model_PhieuGiamGia(String maPGG, String trangThai) {
-        this.maPGG = maPGG;
-        this.trangThai = trangThai;
-    }
-
- 
-
-    public model_PhieuGiamGia(int Stt, String maPGG, String tenPGG, double dieuKienGiam, double giaGiamToiDa, int soLuong, Date ngayTao, Date ngayBatDau, Date ngayKetThuc, boolean maHTGG, String trangThai) {
-        this.Stt = Stt;
+    public model_PhieuGiamGia(String maPGG, String tenPGG, double dieuKienGiam, double giaGiamToiDa, int soLuong, Date ngayTao, Date ngayBatDau, Date ngayKetThuc, boolean maHTGG) {
         this.maPGG = maPGG;
         this.tenPGG = tenPGG;
         this.dieuKienGiam = dieuKienGiam;
@@ -44,44 +35,6 @@ public class model_PhieuGiamGia {
         this.ngayBatDau = ngayBatDau;
         this.ngayKetThuc = ngayKetThuc;
         this.maHTGG = maHTGG;
-        this.trangThai = trangThai;
-    }
-
-    public model_PhieuGiamGia(String maPGG, String tenPGG, double dieuKienGiam, double giaGiamToiDa, int soLuong, Date ngayBatDau, Date ngayKetThuc, boolean maHTGG, String trangThai) {
-        this.maPGG = maPGG;
-        this.tenPGG = tenPGG;
-        this.dieuKienGiam = dieuKienGiam;
-        this.giaGiamToiDa = giaGiamToiDa;
-        this.soLuong = soLuong;
-        this.ngayBatDau = ngayBatDau;
-        this.ngayKetThuc = ngayKetThuc;
-        this.maHTGG = maHTGG;
-        this.trangThai = trangThai;
-    }
-
-
-
-
-
-    public model_PhieuGiamGia(String maPGG, String tenPGG, double dieuKienGiam, double giaGiamToiDa, int soLuong, Date ngayTao, Date ngayBatDau, Date ngayKetThuc, boolean maHTGG, String trangThai) {
-        this.maPGG = maPGG;
-        this.tenPGG = tenPGG;
-        this.dieuKienGiam = dieuKienGiam;
-        this.giaGiamToiDa = giaGiamToiDa;
-        this.soLuong = soLuong;
-        this.ngayTao = ngayTao;
-        this.ngayBatDau = ngayBatDau;
-        this.ngayKetThuc = ngayKetThuc;
-        this.maHTGG = maHTGG;
-        this.trangThai = trangThai;
-    }
-
-    public int getStt() {
-        return Stt;
-    }
-
-    public void setStt(int Stt) {
-        this.Stt = Stt;
     }
 
     public String getMaPGG() {
@@ -156,19 +109,8 @@ public class model_PhieuGiamGia {
         this.maHTGG = maHTGG;
     }
 
-    public String getTrangThai() {
-        return trangThai;
-    }
-
-    public void setTrangThai(String trangThai) {
-        this.trangThai = trangThai;
-    }
-
-
-
     public Object[] toDataRow() {
-        return new Object[]{this.getStt(), this.getMaPGG(), this.getTenPGG(), this.getDieuKienGiam(), this.getGiaGiamToiDa(),
-             this.getSoLuong(), this.getNgayTao(), this.getNgayBatDau(), this.getNgayKetThuc(), this.isMaHTGG()? "Giảm Tiền mặt" : "Giảm phần trăm",
-             this.getTrangThai()};
+        return new Object[]{this.getMaPGG(), this.getTenPGG(), this.getDieuKienGiam(), this.getGiaGiamToiDa(),
+             this.getSoLuong(), this.getNgayTao(), this.getNgayBatDau(), this.getNgayKetThuc(), this.isMaHTGG()? "Giảm Tiền mặt" : "Giảm phần trăm"};
     }
 }
